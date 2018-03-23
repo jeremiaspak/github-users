@@ -1,0 +1,47 @@
+<app-header></app-header>
+<div class="container">
+  <section class="content" *ngIf="user">
+    <section class="user">
+      <img
+        class="avatar"
+        [src]="user.avatarUrl"
+        [alt]="user.name">
+      <div class="user-info">
+        <p class="name">
+          {{ user.name }}
+        </p>
+        <p class="login">
+          {{ user.login }}
+        </p>
+      </div>
+    </section>
+
+    <div class="tabs">
+      <app-tabs
+        [items]="tabs"
+        (selected)="onTabSelected($event)"
+        >
+      </app-tabs>
+
+      <div class="tab-content" *ngIf="activeTab === 'Repositories'">
+        <ul class="tab-list">
+          <li class="list-item"
+            *ngFor="let repository of repositories">
+            <p class="owner">{{ repository.owner.login }} / {{ repository.name }}</p>
+            <p class="description">{{ repository.description }}</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content" *ngIf="activeTab === 'Starred'">
+        <ul class="tab-list">
+          <li class="list-item"
+            *ngFor="let repository of starredRepositories">
+            <p class="owner">{{ repository.owner.login }} / {{ repository.name }}</p>
+            <p class="description">{{ repository.description }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

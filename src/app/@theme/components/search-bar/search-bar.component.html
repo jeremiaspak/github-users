@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+  <input
+    formControlName="search"
+    [placeholder]="placeholder"
+    type="text"
+    class="input">
+  <app-button
+    primary="true"
+    type="submit"
+    [disabled]="!form.valid"
+    class="button">
+    Submit
+  </app-button>
+</form>

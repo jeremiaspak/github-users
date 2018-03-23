@@ -1,0 +1,89 @@
+@import '../../@theme/styles/core';
+
+.content {
+  padding: $gutter;
+
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.user {
+  display: flex;
+
+  @include desktop {
+    flex-direction: column;
+  }
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+
+  @include desktop {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.user-info {
+  margin-left: $gutter;
+
+  @include desktop {
+    margin: 15px 0 0 0;
+  }
+}
+
+.name {
+  margin: 0;
+  font-size: 22px;
+}
+
+.login {
+  margin: 5px 0 0;
+}
+
+.tabs {
+  width: 100%;
+  margin: 40px 0 0;
+
+  @include desktop {
+    margin: 0 0 0 60px;
+  }
+}
+
+.tab-content {
+  background-color: $primary-gray;
+}
+
+.tab-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.list-item {
+  padding: $gutter;
+
+  & + .list-item {
+    border-top: 1px solid $white;
+  }
+}
+
+.owner {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.description {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: lighten($black, 30%);
+}

@@ -1,0 +1,36 @@
+@import '../../styles/core';
+
+.header {
+  color: $white;
+  background-color: $primary-color;
+
+  .container {
+    display: flex;
+    align-items: center;
+    padding: $gutter;
+  }
+}
+
+.brand {
+  margin: 0;
+  font-size: 22px;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+
+}
+
+.nav-link {
+  text-decoration: none;
+  color: $white;
+}
