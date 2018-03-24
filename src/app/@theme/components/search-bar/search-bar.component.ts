@@ -10,6 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class SearchBarComponent implements OnInit {
   @Output() search = new EventEmitter<string>();
   @Input() placeholder: string;
+  @Input() label: string;
   form: FormGroup;
 
   constructor() { }

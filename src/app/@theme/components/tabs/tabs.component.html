@@ -1,12 +1,12 @@
-<nav>
-  <ul class="list">
-    <li class="list-item"
-      *ngFor="let item of items">
-      <a class="link"
-        [ngClass]="{'active': activeTab === item}"
-        (click)="onClick(item)">
-        {{ item }}
-      </a>
-    </li>
-  </ul>
-</nav>
+<div class="tablist"
+  role="tablist"
+  [attr.aria-label]="label">
+  <button class="tab"
+    role="tab"
+    [attr.aria-selected]="activeTab === item"
+    *ngFor="let item of items"
+    [ngClass]="{'active': activeTab === item}"
+    (click)="onClick(item)">
+    {{ item }}
+  </button>
+</div>

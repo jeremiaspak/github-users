@@ -8,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 export class TabsComponent implements OnInit {
   @Input() items: {}[] =[];
+  @Input() label: string;
   @Output() selected =  new EventEmitter<string>();
 
   activeTab: string;

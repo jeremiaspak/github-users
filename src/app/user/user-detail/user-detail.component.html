@@ -1,11 +1,11 @@
 <app-header></app-header>
 <div class="container">
-  <section class="content" *ngIf="user">
-    <section class="user">
+  <main class="content" *ngIf="user">
+    <section class="user" aria-label="">
       <img
         class="avatar"
         [src]="user.avatarUrl"
-        [alt]="user.name">
+        alt="{{ user.name }} picute profile">
       <div class="user-info">
         <p class="name">
           {{ user.name }}
@@ -16,32 +16,45 @@
       </div>
     </section>
 
-    <div class="tabs">
+    <section class="tabs">
       <app-tabs
+        [label]="'User Information'"
         [items]="tabs"
         (selected)="onTabSelected($event)"
         >
       </app-tabs>
-
-      <div class="tab-content" *ngIf="activeTab === 'Repositories'">
+      <div class="tab-panel"
+        role="tabpanel"
+        *ngIf="activeTab === 'Repositories'">
         <ul class="tab-list">
           <li class="list-item"
+            aria-label="User Repository"
             *ngFor="let repository of repositories">
-            <p class="owner">{{ repository.owner.login }} / {{ repository.name }}</p>
-            <p class="description">{{ repository.description }}</p>
+            <p class="owner">
+              {{ repository.owner.login }} / {{ repository.name }}
+            </p>
+            <p class="description">
+              {{ repository.description }}
+            </p>
           </li>
         </ul>
       </div>
-
-      <div class="tab-content" *ngIf="activeTab === 'Starred'">
+      <div class="tab-panel"
+        role="tabpanel"
+        *ngIf="activeTab === 'Starred'">
         <ul class="tab-list">
           <li class="list-item"
+            aria-label="Starred Repository"
             *ngFor="let repository of starredRepositories">
-            <p class="owner">{{ repository.owner.login }} / {{ repository.name }}</p>
-            <p class="description">{{ repository.description }}</p>
+            <p class="owner">
+              {{ repository.owner.login }} / {{ repository.name }}
+            </p>
+            <p class="description">
+              {{ repository.description }}
+            </p>
           </li>
         </ul>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 </div>

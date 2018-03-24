@@ -1,7 +1,12 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()"
+  role="search"
+  class="form">
   <input
     formControlName="search"
     [placeholder]="placeholder"
+    [attr.aria-label]="label"
     type="text"
     class="input">
   <app-button

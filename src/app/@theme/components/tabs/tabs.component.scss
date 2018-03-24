@@ -1,6 +1,6 @@
 @import '../../styles/core';
 
-.list {
+.tablist {
   display: flex;
   width: 100%;
   padding: 0;
@@ -9,16 +9,14 @@
   list-style: none;
 }
 
-.list-item {
+.tab {
   flex-grow: 1;
-}
-
-.link {
   display: block;
   padding: 15px 20px;
 
   text-align: center;
   color: $black;
+  font-size: 16px;
   background-color: $white;
   border: 1px solid $primary-gray;
   cursor: pointer;
@@ -28,4 +26,3 @@
     background-color: $primary-gray;
   }
 }
-

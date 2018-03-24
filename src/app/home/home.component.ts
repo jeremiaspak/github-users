@@ -9,7 +9,7 @@ import { User } from '../user/user.model';
 })
 
 export class HomeComponent implements OnInit {
-  userList: {}[];
+  userList: {}[] = [];
 
   constructor(
     private userService: UserService
@@ -25,7 +25,9 @@ export class HomeComponent implements OnInit {
             return {
               text: user.login,
               imageUrl: user.avatarUrl,
-              link: `/user/${user.login}`
+              imageAlt: `${user.login}'s picture`,
+              link: `/user/${user.login}`,
+              label: `${user.login} Github Profile`,
             };
           });
         }

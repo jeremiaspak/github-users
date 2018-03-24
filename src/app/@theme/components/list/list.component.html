@@ -2,9 +2,10 @@
   <li class="list-item"
     *ngFor="let item of items">
     <a [routerLink]="item.link"
+      [attr.aria-label]="item.label"
       class="link">
       <img [src]="item.imageUrl"
-        [alt]="item.text"
+        [alt]="item.imageAlt"
         class="image">
       <p class="text">
         {{ item.text }}

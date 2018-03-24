@@ -1,12 +1,17 @@
 <app-header></app-header>
 <div class="container">
-  <div class="content">
+  <main class="content">
+    <h1 class="title">Search Github Users</h1>
     <app-search-bar
-      placeholder="Search Github Users"
+      class="search-bar"
+      placeholder="Type a user name"
+      label="Search for Github users"
       (search)="onSearch($event)">
     </app-search-bar>
-    <app-list
-      [items]="userList">
-    </app-list>
-  </div>
+    <section *ngIf="userList.length > 0">
+      <h2 class="list-title">Users Found</h2>
+      <app-list aria-live="polite" [items]="userList">
+      </app-list>
+    </section>
+  </main>
 </div>
