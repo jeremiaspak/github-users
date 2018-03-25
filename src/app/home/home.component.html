@@ -8,6 +8,9 @@
       label="Search for Github users"
       (search)="onSearch($event)">
     </app-search-bar>
+    <p class="warning" *ngIf="!isNetworkAvailable">
+      Sorry, you need internet connection to search for users.
+    </p>
     <section *ngIf="userList.length > 0">
       <h2 class="list-title">Users Found</h2>
       <app-list aria-live="polite" [items]="userList">

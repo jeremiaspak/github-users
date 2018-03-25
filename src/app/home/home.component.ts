@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user/user.service';
 import { User } from '../user/user.model';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,7 @@ import { User } from '../user/user.model';
 
 export class HomeComponent implements OnInit {
   userList: {}[] = [];
+  isNetworkAvailable: boolean = true;
 
   constructor(
     private userService: UserService
@@ -18,6 +20,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() { }
 
   onSearch(searchTerm: string) {
+    this.isNetworkAvailable = true;
+
     this.userService.searchUser(searchTerm)
       .subscribe(
         (userList: User[]) => {
@@ -30,6 +34,11 @@ export class HomeComponent implements OnInit {
               label: `${user.login} Github Profile`,
             };
           });
+        },
+        (error: HttpErrorResponse) => {
+          if(error.status === 0) {
+            this.isNetworkAvailable = false;
+          }
         }
       )
   }

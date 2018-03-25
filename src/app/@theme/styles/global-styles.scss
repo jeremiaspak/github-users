@@ -24,3 +24,7 @@ input {
   margin: 0 auto;
   max-width: $desktop-large-width;
 }
+
+.warning {
+  color: $warning-color;
+}
