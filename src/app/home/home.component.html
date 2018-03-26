@@ -1,6 +1,9 @@
 <app-header></app-header>
 <div class="container">
   <main class="content">
+    <p class="warning" *ngIf="isUpdateAvailable">
+      A new version of this app is Available! Refresh the page to see it.
+    </p>
     <h1 class="title">Search Github Users</h1>
     <app-search-bar
       class="search-bar"

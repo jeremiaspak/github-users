@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user/user.service';
 import { User } from '../user/user.model';
 import { HttpErrorResponse } from '@angular/common/http';
+import { SwUpdateService } from '../core/services/sw-update.service';
 
 @Component({
   selector: 'app-home',
@@ -12,12 +13,19 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class HomeComponent implements OnInit {
   userList: {}[] = [];
   isNetworkAvailable: boolean = true;
+  isUpdateAvailable: boolean = false;
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private swUpdateService: SwUpdateService,
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.swUpdateService.updatesAvailable.subscribe(() => {
+        this.isUpdateAvailable = true;
+      }
+    );
+  }
 
   onSearch(searchTerm: string) {
     this.isNetworkAvailable = true;
