@@ -7,13 +7,12 @@
   .container {
     display: flex;
     align-items: center;
-    padding: 15px $gutter;
+    padding: 10px $gutter;
   }
 }
 
 .brand {
-  margin: 0;
-  font-size: 22px;
+  width: 32px;
 }
 
 .nav {
@@ -26,11 +25,11 @@
   margin: 0;
 }
 
-.nav-item {
-
-}
-
 .nav-link {
   text-decoration: none;
   color: $white;
+
+  &.active {
+
+  }
 }
