@@ -1,0 +1,51 @@
+{
+  "configVersion": 1,
+  "index": "/github-users/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/github-users/favicon.ico",
+        "/github-users/index.html",
+        "/github-users/0.65ffa45039bebc438470.chunk.js",
+        "/github-users/1.c234fabce44a54162452.chunk.js",
+        "/github-users/2.99a30fe6987c71a21713.chunk.js",
+        "/github-users/inline.2745c5f8416e72135e67.bundle.js",
+        "/github-users/main.f99420bd246d7663413b.bundle.js",
+        "/github-users/polyfills.eaea3105f069963c0bbd.bundle.js",
+        "/github-users/styles.e33075bf9ddb8020e358.bundle.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/github-users/assets/icon-128x128.png",
+        "/github-users/assets/icon-152x152.png",
+        "/github-users/assets/icon-256x256.png",
+        "/github-users/assets/icon-512x512.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/github-users/0.65ffa45039bebc438470.chunk.js": "cc32c0a306348c7863c0e9f065fba25c60dc7db7",
+    "/github-users/assets/icon-128x128.png": "39775b1098a69f0ddcc2254b2496fa5755fa3826",
+    "/github-users/1.c234fabce44a54162452.chunk.js": "dcb81104657c7c0fdb5901eef781bfe887023a96",
+    "/github-users/assets/icon-152x152.png": "c89ab600b69c947fcb94f3a5874cfae3b3b0c768",
+    "/github-users/2.99a30fe6987c71a21713.chunk.js": "268b6744d3819a24d0d1f77e3fb1e8b153c1a938",
+    "/github-users/assets/icon-256x256.png": "3e21b77728a1591111bd5eb25864b98f8bd5e7fa",
+    "/github-users/inline.2745c5f8416e72135e67.bundle.js": "26c0c5309ee07044ff44987bee1ea74cb282462a",
+    "/github-users/assets/icon-512x512.png": "857171cf94a0b6ef639c880deb77d2e49960ef35",
+    "/github-users/main.f99420bd246d7663413b.bundle.js": "d9f124efbce4b47c3f55b4261193a02a2c41b886",
+    "/github-users/polyfills.eaea3105f069963c0bbd.bundle.js": "46bb99a6b571cd684d3c6593c4ee459b2c554af5",
+    "/github-users/styles.e33075bf9ddb8020e358.bundle.css": "3c2733219e26527e921dad551e9f91f7e8131abb",
+    "/github-users/favicon.ico": "2e946f1c273fa66431a360184e0fcc773606c589",
+    "/github-users/index.html": "8cb61270b504757da5a372ded6041ef7ecbc36bb"
+  }
+}
