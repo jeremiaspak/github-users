@@ -9,7 +9,12 @@ import {
   ListComponent,
   SearchBarComponent,
   TabsComponent,
+  ModalComponent,
 } from './components';
+
+import {
+  ModalService
+} from './components/modal/modal.service';
 
 const baseModules = [
   CommonModule,
@@ -23,6 +28,7 @@ const components = [
   ListComponent,
   SearchBarComponent,
   TabsComponent,
+  ModalComponent,
 ];
 
 @NgModule({
@@ -36,6 +42,9 @@ const components = [
     ...baseModules,
     ...components,
   ],
-  providers: []
+  providers: [
+    ModalService
+  ],
+  entryComponents: [ModalComponent]
 })
 export class ThemeModule { }

@@ -1,0 +1,52 @@
+@import '../../styles/core';
+
+.modal {
+  margin: 20px auto;
+  max-width: 500px;
+  background-color: $white;
+}
+
+.modal-container {
+  padding: $gutter;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: $gutter;
+
+  border-bottom: 1px solid $primary-gray;
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.close {
+  margin-left: auto;
+  padding: 5px 0 5px 5px;
+
+  border: none;
+  background-color: transparent;
+
+  .icon {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url('assets/icon-x.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.content {
+  padding: $gutter;
+}

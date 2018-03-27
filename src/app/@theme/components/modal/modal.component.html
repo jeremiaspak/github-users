@@ -1,0 +1,18 @@
+<div class="modal-container">
+  <section
+    role="dialog"
+    class="modal">
+    <header class="header">
+      <h1 class="title">{{ title }}</h1>
+      <button
+        (click)="onCloseClick()"
+        aria-label="Close modal button"
+        class="close">
+        <span class="icon"></span>
+      </button>
+    </header>
+    <div class="content">
+      {{ text }}
+    </div>
+  </section>
+</div>
