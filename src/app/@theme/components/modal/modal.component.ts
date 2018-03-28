@@ -9,13 +9,13 @@ import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 export class ModalComponent implements OnInit {
   @Input() title: string;
   @Input() text: string;
-  close = new EventEmitter<any>();
+  closed = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit() { }
 
   onCloseClick() {
-    this.close.emit();
+    this.closed.emit();
   }
 }

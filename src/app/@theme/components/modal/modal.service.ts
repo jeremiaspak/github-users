@@ -25,7 +25,7 @@ export class ModalService {
 
     this.modalRef.instance.title = title;
     this.modalRef.instance.text = text;
-    this.modalRef.instance.close.subscribe(() => {
+    this.modalRef.instance.closed.subscribe(() => {
         this.destroy();
       });
 
@@ -36,6 +36,7 @@ export class ModalService {
   }
 
   destroy() {
+    this.modalRef.instance.closed.unsubscribe();
     this.appRef.detachView(this.modalRef.hostView);
     this.modalRef.destroy();
   }

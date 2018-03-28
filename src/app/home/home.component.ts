@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user/user.service';
 import { User } from '../user/user.model';
 import { HttpErrorResponse } from '@angular/common/http';
-import { SwUpdateService } from '../core/services/sw-update.service';
+import { ModalService } from '../@theme/components/modal/modal.service';
 
 @Component({
   selector: 'app-home',
@@ -17,17 +17,13 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private swUpdateService: SwUpdateService,
+    private modalSer: ModalService
   ) { }
 
-  ngOnInit() {
-    this.swUpdateService.updatesAvailable.subscribe(() => {
-        this.isUpdateAvailable = true;
-      }
-    );
-  }
+  ngOnInit() {}
 
   onSearch(searchTerm: string) {
+    this.modalSer.show('aaa', 'aaaaa')
     this.isNetworkAvailable = true;
 
     this.userService.searchUser(searchTerm)
