@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {}
 
   onSearch(searchTerm: string) {
-    this.modalSer.show('aaa', 'aaaaa')
     this.isNetworkAvailable = true;
 
     this.userService.searchUser(searchTerm)
