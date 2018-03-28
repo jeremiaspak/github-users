@@ -2,7 +2,15 @@
 MIT
 MIT
 
+@angular/router@5.2.9
+MIT
+MIT
+
 @angular/forms@5.2.9
+MIT
+MIT
+
+@angular/common@5.2.9
 MIT
 MIT
 
@@ -53,19 +61,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-@angular/common@5.2.9
-MIT
-MIT
-
-@angular/router@5.2.9
+@angular/platform-browser@5.2.9
 MIT
 MIT
 
 @angular/service-worker@5.2.9
-MIT
-MIT
-
-@angular/platform-browser@5.2.9
 MIT
 MIT
 
